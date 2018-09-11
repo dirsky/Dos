@@ -1,0 +1,15 @@
+ 驱动器 C 中的卷是 Win7
+ 卷的序列号是 0005-21E8
+
+ c:\ 的目录
+
+2009/06/11  05:42                24 autoexec.bat
+2009/06/11  05:42                10 config.sys
+2018/08/01  10:19    <DIR>          FilePackage
+2018/08/01  10:23    <DIR>          HdpLog
+2018/08/01  10:24    <DIR>          PermanenceDataPath
+2018/08/06  09:52    <DIR>          Program Files
+2018/05/13  15:08    <DIR>          Users
+2018/08/06  16:33    <DIR>          Windows
+               2 个文件             34 字节
+               6 个目录 95,617,437,696 可用字节
