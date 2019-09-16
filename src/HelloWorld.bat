@@ -1,10 +1,11 @@
 @echo off
 title New标题
 ::设置bat的前、后颜色
-color 74
+::color 74
 ::清理屏幕
 cls
 
+echo
 echo ----------------------------------------------
 echo Author:徐国忠
 echo Ver:1.0
@@ -21,36 +22,34 @@ md File
 :next
 ::进入文件夹
 cd File
-::生成日期字符串并写入txt文件
+::生成日期字符串并写入txt文件，一个>是覆盖
 date /t > date.txt
 ::返回上一级目录
-cd ..
-::生成时间字符串并写入txt文件
+::cd ..
+::生成时间字符串并写入txt文件，两个>>是追加
 time /t >> time.txt
 path >> path.txt
-
-IF NOT EXIST cdir.txt ECHO cdir.txt does not exist 1
-dir c:\*.* > cdir.txt
-IF EXIST cdir.txt ECHO cdir.txt exist 2
-
 HELP > HELP.txt
+
+IF EXIST cdir.txt (ECHO cdir.txt exist) ELSE echo not exist cdir.txt & dir c:\*.* > cdir.txt
+
+copy time.txt time_copy.txt
+::删除文件用erase也行，同时执行用一个&符号
 copy path.txt path2.txt /y & del path.txt
 ::复制文件，注意反斜杠\
-copy time.txt File\time2.txt
-copy time.txt time5.txt
-::删除文件用erase也行
+copy HELP.txt ..\io\HELP.txt
 
-if exist time5.txt del /q time5.txt
+if exist date.txt del /q date.txt
+
 if exist time3.txt goto gg
 ::重新命名
+::显示文件内容
 ren time.txt time3.txt
+type time3.txt | find "15" && echo 15点多啦
 
 :gg
-::删除非空目录
-::rd File
-ERASE time.txt
-::显示文件内容
-type time3.txt
-type time3.txt | find "10" && echo 10点多啦
+ERASE time3.txt
 
-pause
+cd ..
+::强制删除目录及其子文件
+if "%1"=="d" rd /s /q File

@@ -55,12 +55,3 @@ for /f "tokens=1,*" %%a in (%str%) do (
 
     goto STR_VISTOR
 )
-
-
-::—≠ª∑∂¡»°txt
-for /f "delims=" %%a in (HELP.txt) do (
-
- ECHO %%a
- PAUSE
-) 
-pause
