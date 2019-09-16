@@ -1,4 +1,4 @@
 # Dos
 This is for Dos
 
-G430 Edit for it
+注意src中使用的脚本编码方式为GBK，请注意调整。
