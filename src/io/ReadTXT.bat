@@ -6,8 +6,6 @@
 
 ::/f的目的是指定in后面的是一个文件否则认为是一个字符串
 for /f "delims=" %%a in (HELP.txt) do (
-
- ECHO %%a
- PAUSE
-) 
-pause
+    ECHO %%a
+    PAUSE
+)

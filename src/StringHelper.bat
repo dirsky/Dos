@@ -2,8 +2,8 @@
 ::截取字符串
 set xgz=徐国忠Hello优秀是一种习惯
 echo %xgz%World
-echo 原字符串为:%xgz%
-echo 截取前5个字符:%xgz:~0,5%
+echo 原字符串为 %xgz%
+echo 截取前5个字符 %xgz:~0,5%  %xgz:~,5%
 echo 截取最后5个字符:%xgz:~-5%
 echo 截取第一个到倒数第6个字符:%xgz:~1,-5%
 echo 从第4个字符开始截取5个字符:%xgz:~3,5%
