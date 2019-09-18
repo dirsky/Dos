@@ -7,6 +7,6 @@
 ::ATTRIB         显示或更改文件属性。
 
 ::/f指定in内是文件否则认为是字符串
-for /f "delims= " %%a in (HELP.txt) do (
-    ECHO %%a
+for /f "delims= " %%p in (HELP.txt) do (
+    ECHO %%p
 )
